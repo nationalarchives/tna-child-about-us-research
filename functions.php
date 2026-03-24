@@ -1,6 +1,6 @@
 <?php
-/* 
- * REGISTER SITE GLOBAL VARIABLES 
+/*
+ * REGISTER SITE GLOBAL VARIABLES
  */
 
 function tnatheme_globals() {
@@ -8,7 +8,7 @@ function tnatheme_globals() {
     $tnatheme['ischildsite'] = 1;
     $tnatheme['childsitename'] = 'Research and scholarship';
     $headers = apache_request_headers();
-    if ( isset($_SERVER['HTTP_X_NGINX_PROXY']) && isset($headers['X_HOST_TYPE']) && $headers['X_HOST_TYPE'] == 'public' ) {
+    if ( isset($_SERVER['HTTP_X_NGINX_PROXY']) && isset($headers['X-Host-Type']) && $headers['X-Host-Type'] == 'public' ) {
         $tnatheme['subsitepath'] = '/about/our-role/research-and-scholarship';
         $tnatheme['subsitepatharr'] = array(
             'About us' => '/about/',
